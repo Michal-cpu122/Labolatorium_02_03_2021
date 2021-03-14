@@ -1,0 +1,82 @@
+//Main
+
+package com.company;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Vehicle pojazd = new Vehicle (" BMW ", new Engine(" V8 ") , new Size( 6 ) , new Colour(" Czarny "));
+        System.out.pritln(pojazd);
+    }
+}
+
+----------------------------------
+
+//Engine
+
+package com.company;
+
+public class Engine
+{
+    String engine;
+    public Engine(String engine)
+    {
+        this.engine = engine;
+    }
+}
+
+--------------------------------
+
+//Size
+
+package com.company;
+
+public class Size
+{
+    double size;
+    public Size(int size)
+    {
+        this.size = size;
+    }
+}
+
+----------------------------------
+
+//Vehicle
+
+package com.company;
+
+public class Vehicle {
+    String vehicle;
+    Engine engine;
+    Size size;
+    Colour colour;
+    public Vehicle (String vehicle, Engine engine, Size size, Colour colour)
+    {
+        this.vehicle = vehicle;
+        this.engine = engine;
+        this.size = size;
+        this.colour = colour;
+    }
+    public String toString()
+    {
+        return " Silnik, " + engine.engine + "\n Model, " + vehicle + "\n Kolor, " + colour.colour + "\n Wielkość," + size.size;
+    }
+}
+
+------------------------------------------------
+
+//Colour
+
+package com.company;
+
+public class colour
+{
+    String colour;
+    public colour(String colour)
+
+    {
+        this.colour = colour;
+    }
+}
